@@ -89,5 +89,13 @@ namespace Hackovid_Database
                 form.ShowDialog();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (Fatores form = new Fatores())
+            {
+                form.ShowDialog();
+            }
+        }
     }
 }

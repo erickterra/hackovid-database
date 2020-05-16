@@ -44,7 +44,7 @@
             this.button3.TabIndex = 13;
             this.button3.Text = "Salvar";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.botaoSalvar);
             // 
             // button2
             // 
@@ -54,7 +54,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Pesquisar";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.botaoPesquisar);
             // 
             // label2
             // 
@@ -105,6 +105,7 @@
             this.Controls.Add(this.txtCod);
             this.Name = "Fatores";
             this.Text = "Fatores";
+            this.Load += new System.EventHandler(this.LoadFatores);
             this.ResumeLayout(false);
             this.PerformLayout();
 

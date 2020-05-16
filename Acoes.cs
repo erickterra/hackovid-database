@@ -22,11 +22,12 @@ namespace Hackovid_Database
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void botaoPesquisar(object sender, EventArgs e)
         {
             LoadAçao();
             if (selectedAcao != null)
             {
+                //adiciona a acao selecionada no form principal
                 listBoxNoticia.Items.Clear();
                 txtCod.Text = selectedAcao.Cod_Acao;
                 txtTitulo.Text = selectedAcao.Titulo;
@@ -34,7 +35,6 @@ namespace Hackovid_Database
                 txtCusto.Text = selectedAcao.Custo.ToString();
                 chkVariavel.Checked = selectedAcao.IsCustoVariavel;
                 cbFator.Text = selectedAcao.FatorCusto.Nome;
-                listBoxNoticia.Items.Clear();
 
                 foreach(Noticia noticia in selectedAcao.Noticias)
                 {
@@ -44,6 +44,7 @@ namespace Hackovid_Database
             }
         }
 
+        //Carrega todas as Ações no botão de pesquisa
         private void LoadAçao()
         {
             Database = Database.ReadJson();
@@ -74,7 +75,7 @@ namespace Hackovid_Database
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void botaoSalvar(object sender, EventArgs e)
         {
             Database = Database.ReadJson();
             Açao açao = new Açao();
