@@ -119,8 +119,11 @@ namespace Hackovid_Database
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                this.ID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                this.Close();
+                if (dataGridView1.Rows[e.RowIndex].Cells[0].Value != null)
+                {
+                    this.ID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    this.Close();
+                }
             }
         }
     }

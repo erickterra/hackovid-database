@@ -51,7 +51,7 @@ namespace Hackovid_Database
         private void LoadNoticias()
         {
             Database = Database.ReadJson();
-            List<Noticia> noticias = Database.noticias;
+            List<Noticia> noticias = Database.noticias.Where(not => not.Cod_noticia.Contains(txtCod.Text) || not.Descrição.Contains(txtCod.Text) || not.Manchete.Contains(txtCod.Text)).ToList();
             using (SearchForm s = new SearchForm())
             {
                 s.CreateTable(noticias, typeof(Noticia));

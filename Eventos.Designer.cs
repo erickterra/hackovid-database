@@ -49,6 +49,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -64,17 +65,17 @@
             // txtTitulo
             // 
             this.txtTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitulo.Location = new System.Drawing.Point(178, 78);
+            this.txtTitulo.Location = new System.Drawing.Point(81, 78);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(207, 40);
-            this.txtTitulo.TabIndex = 17;
+            this.txtTitulo.Size = new System.Drawing.Size(354, 40);
+            this.txtTitulo.TabIndex = 1;
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(375, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 40);
-            this.button3.TabIndex = 15;
+            this.button3.TabIndex = 13;
             this.button3.Text = "Salvar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.botaoSalvar);
@@ -84,7 +85,7 @@
             this.button2.Location = new System.Drawing.Point(294, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 40);
-            this.button2.TabIndex = 16;
+            this.button2.TabIndex = 14;
             this.button2.Text = "Pesquisar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.botaoPesquisar);
@@ -105,14 +106,14 @@
             this.txtCod.Location = new System.Drawing.Point(81, 12);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(207, 40);
-            this.txtCod.TabIndex = 13;
+            this.txtCod.TabIndex = 0;
             // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(744, 58);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(31, 91);
-            this.button5.TabIndex = 34;
+            this.button5.TabIndex = 6;
             this.button5.Text = "-";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.removeNoticia);
@@ -125,14 +126,14 @@
             this.listBoxNoticia.Location = new System.Drawing.Point(479, 58);
             this.listBoxNoticia.Name = "listBoxNoticia";
             this.listBoxNoticia.Size = new System.Drawing.Size(259, 91);
-            this.listBoxNoticia.TabIndex = 33;
+            this.listBoxNoticia.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(569, 8);
+            this.button1.Location = new System.Drawing.Point(744, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 39);
-            this.button1.TabIndex = 32;
+            this.button1.TabIndex = 4;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.adicionaNoticia);
@@ -141,7 +142,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(474, 12);
+            this.label6.Location = new System.Drawing.Point(474, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 25);
             this.label6.TabIndex = 31;
@@ -165,7 +166,7 @@
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDesc.Size = new System.Drawing.Size(421, 139);
-            this.txtDesc.TabIndex = 35;
+            this.txtDesc.TabIndex = 3;
             // 
             // listBox1
             // 
@@ -204,7 +205,7 @@
             this.comboBox1.Location = new System.Drawing.Point(550, 176);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(74, 32);
-            this.comboBox1.TabIndex = 35;
+            this.comboBox1.TabIndex = 7;
             this.comboBox1.Text = "Fator";
             // 
             // comboBox2
@@ -219,7 +220,7 @@
             this.comboBox2.Location = new System.Drawing.Point(630, 176);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(43, 32);
-            this.comboBox2.TabIndex = 36;
+            this.comboBox2.TabIndex = 8;
             this.comboBox2.Text = "x";
             // 
             // textBox1
@@ -228,7 +229,7 @@
             this.textBox1.Location = new System.Drawing.Point(679, 174);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(59, 35);
-            this.textBox1.TabIndex = 37;
+            this.textBox1.TabIndex = 9;
             this.textBox1.Text = "0";
             // 
             // button6
@@ -236,7 +237,7 @@
             this.button6.Location = new System.Drawing.Point(744, 224);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(31, 91);
-            this.button6.TabIndex = 38;
+            this.button6.TabIndex = 12;
             this.button6.Text = "-";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -256,14 +257,23 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(178, 129);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 40);
-            this.textBox2.TabIndex = 39;
+            this.textBox2.Size = new System.Drawing.Size(257, 40);
+            this.textBox2.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(569, 7);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(169, 40);
+            this.textBox3.TabIndex = 41;
             // 
             // Eventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 362);
+            this.ClientSize = new System.Drawing.Size(791, 362);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button6);
@@ -286,7 +296,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCod);
             this.Name = "Eventos";
-            this.Text = "Form1";
+            this.Text = "10";
             this.Load += new System.EventHandler(this.LoadEventos);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -316,5 +326,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

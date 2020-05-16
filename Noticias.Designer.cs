@@ -51,7 +51,7 @@ namespace Hackovid_Database
             this.salvar.Location = new System.Drawing.Point(431, 12);
             this.salvar.Name = "salvar";
             this.salvar.Size = new System.Drawing.Size(75, 40);
-            this.salvar.TabIndex = 13;
+            this.salvar.TabIndex = 7;
             this.salvar.Text = "Salvar";
             this.salvar.UseVisualStyleBackColor = true;
             this.salvar.Click += new System.EventHandler(this.salvar_Click);
@@ -61,7 +61,7 @@ namespace Hackovid_Database
             this.pesquisar.Location = new System.Drawing.Point(350, 12);
             this.pesquisar.Name = "pesquisar";
             this.pesquisar.Size = new System.Drawing.Size(75, 40);
-            this.pesquisar.TabIndex = 14;
+            this.pesquisar.TabIndex = 8;
             this.pesquisar.Text = "Pesquisar";
             this.pesquisar.UseVisualStyleBackColor = true;
             this.pesquisar.Click += new System.EventHandler(this.pesquisar_Click);
@@ -82,15 +82,15 @@ namespace Hackovid_Database
             this.txtCod.Location = new System.Drawing.Point(126, 12);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(207, 40);
-            this.txtCod.TabIndex = 11;
+            this.txtCod.TabIndex = 0;
             // 
             // txtManchete
             // 
             this.txtManchete.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtManchete.Location = new System.Drawing.Point(126, 72);
             this.txtManchete.Name = "txtManchete";
-            this.txtManchete.Size = new System.Drawing.Size(207, 40);
-            this.txtManchete.TabIndex = 32;
+            this.txtManchete.Size = new System.Drawing.Size(306, 40);
+            this.txtManchete.TabIndex = 1;
             // 
             // label1
             // 
@@ -106,7 +106,7 @@ namespace Hackovid_Database
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 146);
+            this.label3.Location = new System.Drawing.Point(6, 388);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 25);
             this.label3.TabIndex = 35;
@@ -115,46 +115,46 @@ namespace Hackovid_Database
             // txtFonte
             // 
             this.txtFonte.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFonte.Location = new System.Drawing.Point(126, 136);
+            this.txtFonte.Location = new System.Drawing.Point(126, 378);
             this.txtFonte.Name = "txtFonte";
-            this.txtFonte.Size = new System.Drawing.Size(207, 40);
-            this.txtFonte.TabIndex = 34;
+            this.txtFonte.Size = new System.Drawing.Size(306, 40);
+            this.txtFonte.TabIndex = 3;
             // 
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(11, 222);
+            this.txtDescricao.Location = new System.Drawing.Point(11, 166);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDescricao.Size = new System.Drawing.Size(421, 191);
-            this.txtDescricao.TabIndex = 32;
+            this.txtDescricao.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 194);
+            this.label4.Location = new System.Drawing.Point(6, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 25);
             this.label4.TabIndex = 33;
             this.label4.Text = "Descrição";
             // 
-            // listBox1
+            // listIndices
             // 
             this.listIndices.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listIndices.FormattingEnabled = true;
             this.listIndices.ItemHeight = 29;
-            this.listIndices.Location = new System.Drawing.Point(471, 266);
-            this.listIndices.Name = "listBox1";
+            this.listIndices.Location = new System.Drawing.Point(453, 118);
+            this.listIndices.Name = "listIndices";
             this.listIndices.Size = new System.Drawing.Size(259, 91);
-            this.listIndices.TabIndex = 23;
+            this.listIndices.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(466, 220);
+            this.label5.Location = new System.Drawing.Point(448, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 25);
             this.label5.TabIndex = 21;
@@ -162,20 +162,20 @@ namespace Hackovid_Database
             // 
             // addIndice
             // 
-            this.addIndice.Location = new System.Drawing.Point(561, 216);
+            this.addIndice.Location = new System.Drawing.Point(543, 68);
             this.addIndice.Name = "addIndice";
             this.addIndice.Size = new System.Drawing.Size(31, 39);
-            this.addIndice.TabIndex = 22;
+            this.addIndice.TabIndex = 4;
             this.addIndice.Text = "+";
             this.addIndice.UseVisualStyleBackColor = false;
             this.addIndice.Click += new System.EventHandler(this.addIndice_Click);
             // 
             // remIndice
             // 
-            this.remIndice.Location = new System.Drawing.Point(736, 266);
+            this.remIndice.Location = new System.Drawing.Point(718, 118);
             this.remIndice.Name = "remIndice";
             this.remIndice.Size = new System.Drawing.Size(31, 91);
-            this.remIndice.TabIndex = 30;
+            this.remIndice.TabIndex = 6;
             this.remIndice.Text = "-";
             this.remIndice.UseVisualStyleBackColor = false;
             this.remIndice.Click += new System.EventHandler(this.remIndice_Click);
@@ -184,7 +184,7 @@ namespace Hackovid_Database
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 438);
+            this.ClientSize = new System.Drawing.Size(760, 537);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.remIndice);
             this.Controls.Add(this.label3);

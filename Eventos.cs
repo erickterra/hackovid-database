@@ -52,6 +52,7 @@ namespace Hackovid_Database.Classes
             evento.Descricao = txtDesc.Text;
             evento.Probab_Acontecer = decimal.Parse(textBox2.Text);
             evento.Titulo = txtTitulo.Text;
+            evento.Noticias = new List<Noticia>();
 
             foreach (string n in listBoxNoticia.Items)
             {
@@ -73,7 +74,7 @@ namespace Hackovid_Database.Classes
         private void LoadEventosTable()
         {
             Database = Database.ReadJson();
-            List<Evento> eventos = Database.eventos;
+            List<Evento> eventos = Database.eventos.Where(e => e.Cod_Evento.Contains(txtCod.Text) || e.Titulo.Contains(txtCod.Text) || e.Descricao.Contains(txtCod.Text)).ToList();
             using (SearchForm s = new SearchForm()){
                 s.CreateTable(eventos, typeof(Evento));
                 s.ShowDialog();
@@ -111,7 +112,8 @@ namespace Hackovid_Database.Classes
         private Noticia LoadNoticias()
         {
             Database = Database.ReadJson();
-            List<Noticia> noticias = Database.noticias;
+            List<Noticia> noticias = Database.noticias.Where(not => not.Cod_noticia.Contains(textBox3.Text)
+            || not.Manchete.Contains(textBox3.Text) || not.Descrição.Contains(textBox3.Text)).ToList();
             Noticia n;
             using (SearchForm s = new SearchForm())
             {

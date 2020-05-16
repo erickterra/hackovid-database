@@ -35,11 +35,22 @@ namespace Hackovid_Database
                 txtCusto.Text = selectedAcao.Custo.ToString();
                 chkVariavel.Checked = selectedAcao.IsCustoVariavel;
                 cbFator.Text = selectedAcao.FatorCusto.Nome;
-
+                listBoxNoticia.Items.Clear();
+                efeitos = new List<Efeito>();
+                lisBoxEfeitos.Items.Clear();
                 foreach(Noticia noticia in selectedAcao.Noticias)
                 {
                     if (noticia != null)
                         listBoxNoticia.Items.Add(noticia.Cod_noticia);
+                }
+
+                foreach (Efeito efeito in selectedAcao.Efeitos)
+                {
+                    if (efeito != null)
+                    {
+                        efeitos.Add(efeito);
+                        lisBoxEfeitos.Items.Add(efeito.Fator.Nome + " " + efeito.Operaçao + " " + efeito.Valor);
+                    }
                 }
             }
         }
@@ -48,7 +59,7 @@ namespace Hackovid_Database
         private void LoadAçao()
         {
             Database = Database.ReadJson();
-            List<Açao> acoes = Database.açoes;
+            List<Açao> acoes = Database.açoes.Where(ac => ac.Cod_Acao.Contains(txtCod.Text) || ac.Titulo.Contains(txtCod.Text) || ac.Descricao.Contains(txtCod.Text)).ToList();
             using (SearchForm s = new SearchForm())
             {
                 s.CreateTable(acoes, typeof(Açao));
@@ -86,6 +97,7 @@ namespace Hackovid_Database
             açao.Custo = int.Parse(txtCusto.Text);
             açao.FatorCusto = Globals.GetFator(cbFator.Text);
             açao.IsCustoVariavel = chkVariavel.Checked;
+            açao.Noticias = new List<Noticia>();
 
             foreach (string n in listBoxNoticia.Items)
             {
@@ -114,7 +126,18 @@ namespace Hackovid_Database
 
         private void ClearFields()
         {
-            throw new NotImplementedException();
+            txtCod.Text = "";
+            txtTitulo.Text = "";
+            txtDesc.Text = "";
+            txtCusto.Text = "0";
+            cbFator.Text = "";
+            comboBox1.Text = "";
+            comboBox2.Text = "+";
+            lisBoxEfeitos.Items.Clear();
+            listBoxNoticia.Items.Clear();
+            efeitos = new List<Efeito>();
+            chkVariavel.Checked = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -129,7 +152,8 @@ namespace Hackovid_Database
         private Noticia LoadNoticias()
         {
             Database = Database.ReadJson();
-            List<Noticia> noticias = Database.noticias;
+            List<Noticia> noticias = Database.noticias.Where(not => not.Cod_noticia.Contains(textBox2.Text) 
+            || not.Manchete.Contains(textBox2.Text) || not.Descrição.Contains(textBox2.Text)).ToList();
             Noticia n;
             using (SearchForm s = new SearchForm())
             {
@@ -139,6 +163,8 @@ namespace Hackovid_Database
             }
             return n;
         }
+
+
 
         private void button4_Click(object sender, EventArgs e)
         {

@@ -64,7 +64,7 @@
             this.txtMetodo.Location = new System.Drawing.Point(102, 58);
             this.txtMetodo.Name = "txtMetodo";
             this.txtMetodo.Size = new System.Drawing.Size(174, 40);
-            this.txtMetodo.TabIndex = 0;
+            this.txtMetodo.TabIndex = 1;
             // 
             // label1
             // 
@@ -91,7 +91,7 @@
             this.button1.Location = new System.Drawing.Point(98, 110);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 39);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 3;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -101,7 +101,7 @@
             this.button2.Location = new System.Drawing.Point(282, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 40);
-            this.button2.TabIndex = 6;
+            this.button2.TabIndex = 7;
             this.button2.Text = "Pesquisar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -124,14 +124,14 @@
             this.listBoxIndices.Location = new System.Drawing.Point(18, 150);
             this.listBoxIndices.Name = "listBoxIndices";
             this.listBoxIndices.Size = new System.Drawing.Size(295, 91);
-            this.listBoxIndices.TabIndex = 7;
+            this.listBoxIndices.TabIndex = 4;
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(319, 150);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(31, 39);
-            this.button4.TabIndex = 8;
+            this.button4.TabIndex = 5;
             this.button4.Text = "-";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);

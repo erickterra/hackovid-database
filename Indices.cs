@@ -39,7 +39,7 @@ namespace Hackovid_Database
         {
             Database = new JsonDatabase();
             Database = Database.ReadJson();
-            indicesList = Database.indices;
+            indicesList = Database.indices.Where(ind => ind.Cod_Indice.Contains(txtCod.Text)).ToList();
             using (SearchForm s = new SearchForm())
             {
                 s.CreateTable(indicesList, typeof(Indice));

@@ -102,7 +102,6 @@
             this.button6.Text = "Noticias";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.showNoticias);
-
             // 
             // button7
             // 
@@ -110,7 +109,7 @@
             this.button7.Location = new System.Drawing.Point(12, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(200, 41);
-            this.button7.TabIndex = 6;
+            this.button7.TabIndex = 7;
             this.button7.Text = "Abrir...";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
