@@ -59,25 +59,24 @@ namespace Hackovid_Database.Classes
             }
 
             evento.Efeitos = efeitos;
-            List<Evento> eventos = Database.eventos;
-            eventos.Remove(eventos.Where(ed => ed.Cod_Evento == cod).FirstOrDefault());
-            eventos.Add(evento);
-            Database.eventos = eventos;
-            Database.WriteJson(Database);
+
+            if (cod != "" && cod != null)
+            {
+                List<Evento> eventos = Database.eventos;
+                eventos.Remove(eventos.Where(ed => ed.Cod_Evento == cod).FirstOrDefault());
+                eventos.Add(evento);
+                Database.eventos = eventos;
+                Database.WriteJson(Database);
+            }
+            else
+            {
+                Database.eventos.Add(evento);
+                Database.WriteJson(Database);
+            }
 
             MessageBox.Show("Salvo com sucesso!");
-            ClearFields();
         }
 
-        private void ClearFields()
-        {
-            txtCod.Text = "";
-            listBoxNoticia.Items.Clear();
-            listBox1.Items.Clear();
-            txtDesc.Text = "";
-            textBox2.Text = "";
-            txtTitulo.Text = "";
-        }
 
         private void LoadEventosTable()
         {
@@ -154,6 +153,11 @@ namespace Hackovid_Database.Classes
                 efeitos.RemoveAt(listBox1.SelectedIndex);
                 listBox1.Items.Remove(listBox1.SelectedItem);
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

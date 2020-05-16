@@ -106,5 +106,13 @@ namespace Hackovid_Database
                 form.ShowDialog();
             }
         }
+
+        private void showNoticias(object sender, EventArgs e)
+        {
+            using (Noticias form = new Noticias())
+            {
+                form.ShowDialog();
+            }
+        }
     }
 }

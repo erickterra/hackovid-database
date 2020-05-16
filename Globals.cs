@@ -73,5 +73,12 @@ namespace Hackovid
             database = database.ReadJson();
             return database.fatores;
         }
+
+        public static List<Indice> GetIndices()
+        {
+            database = new JsonDatabase();
+            database = database.ReadJson();
+            return database.indices;
+        }
     }
 }
