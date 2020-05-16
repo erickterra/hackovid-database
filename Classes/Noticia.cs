@@ -14,6 +14,24 @@ namespace Hackovid
         private List<Indice> indices;
         private string fonte;
 
+        public Noticia()
+        {
+            Cod_noticia = "";
+            Manchete = "";
+            Descrição = "";
+            Indices = new List<Indice>();
+            Fonte = "";
+        }
+
+        public Noticia(string cod_noticia, string manchete, string descrição, List<Indice> indices, string fonte)
+        {
+            Cod_noticia = cod_noticia;
+            Manchete = manchete;
+            Descrição = descrição;
+            Indices = indices;
+            Fonte = fonte;
+        }
+
         public string Cod_noticia { get => cod_noticia; set => cod_noticia = value; }
         public string Manchete { get => manchete; set => manchete = value; }
         public string Descrição { get => descrição; set => descrição = value; }

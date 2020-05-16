@@ -14,6 +14,13 @@ namespace Hackovid
         private string text;
         private float v;
 
+        public Efeito()
+        {
+            Fator = new Fator();
+            Operaçao = "";
+            Valor = 0;
+        }
+
         public Efeito(Fator fator, string text, float v)
         {
             Fator = fator;
