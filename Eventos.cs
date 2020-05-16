@@ -60,19 +60,11 @@ namespace Hackovid_Database.Classes
 
             evento.Efeitos = efeitos;
 
-            if (cod != "" && cod != null)
-            {
-                List<Evento> eventos = Database.eventos;
-                eventos.Remove(eventos.Where(ed => ed.Cod_Evento == cod).FirstOrDefault());
-                eventos.Add(evento);
-                Database.eventos = eventos;
-                Database.WriteJson(Database);
-            }
-            else
-            {
-                Database.eventos.Add(evento);
-                Database.WriteJson(Database);
-            }
+            List<Evento> eventos = Database.eventos;
+            eventos.Remove(eventos.Where(ed => ed.Cod_Evento == cod).FirstOrDefault());
+            eventos.Add(evento);
+            Database.eventos = eventos;
+            Database.WriteJson(Database);
 
             MessageBox.Show("Salvo com sucesso!");
         }
