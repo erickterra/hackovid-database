@@ -58,6 +58,14 @@ namespace Hackovid
             return obj;
         }
 
+        internal static Evento GetEvento(string cod)
+        {
+            database = new JsonDatabase();
+            database = database.ReadJson();
+            Evento obj = database.eventos.Where(e => e.Cod_Evento == cod).FirstOrDefault();
+            return obj;
+        }
+
 
         public static List<Fator> GetFatores()
         {

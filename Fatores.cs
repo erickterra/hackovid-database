@@ -66,19 +66,11 @@ namespace Hackovid_Database
             //todo mudar se converter os valores
             fator.ValorMax = int.Parse(textBox1.Text);
 
-            if (cod != "" && cod != null)
-            {
                 List<Fator> fatores = Database.fatores;
                 fatores.Remove(fatores.Where(f => f.Nome == cod).FirstOrDefault());
                 fatores.Add(fator);
                 Database.fatores = fatores;
                 Database.WriteJson(Database);
-            }
-            else
-            {
-                Database.fatores.Add(fator);
-                Database.WriteJson(Database);
-            }
 
             MessageBox.Show("Salvo com sucesso!");
             ClearFields();

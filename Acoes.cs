@@ -94,7 +94,6 @@ namespace Hackovid_Database
 
             açao.Efeitos = efeitos;
 
-
             if (cod != "" && cod != null)
             {
                 List<Açao> acoes = Database.açoes;

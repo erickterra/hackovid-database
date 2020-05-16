@@ -60,6 +60,12 @@
     <Compile Include="Classes\Efeito.cs" />
     <Compile Include="Classes\Evento.cs" />
     <Compile Include="Classes\Fator.cs" />
+    <Compile Include="Eventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos.Designer.cs">
+      <DependentUpon>Eventos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Indice.cs" />
     <Compile Include="Classes\Noticia.cs" />
     <Compile Include="Fatores.cs">
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="Acoes.resx">
       <DependentUpon>Acoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos.resx">
+      <DependentUpon>Eventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fatores.resx">
       <DependentUpon>Fatores.cs</DependentUpon>
