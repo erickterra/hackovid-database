@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hackovid;
+using Hackovid_Database.Classes;
 
 namespace Hackovid_Database
 {
@@ -85,6 +86,22 @@ namespace Hackovid_Database
         private void button2_Click(object sender, EventArgs e)
         {
             using (Acoes form = new Acoes())
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (Fatores form = new Fatores())
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void showEvento(object sender, EventArgs e)
+        {
+             using(Eventos form = new Eventos())
             {
                 form.ShowDialog();
             }
